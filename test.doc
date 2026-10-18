@@ -1,0 +1,18 @@
+This is a FILE doc test if the help functions is working correctly.
+
+    echo ""
+    echo "#################################################################################"
+    echo "#                                                                               #"
+    echo "# This script is for allowing Keychron launcher to manage Keychron HID devices. #"
+    echo "# Use the -e/--enable flag to give management permissions,                      #"
+    echo "# and use the -d/--disable flag to remove those permissions again.              #"
+    echo "#                                                                               #"
+    echo "# Run this script with -h or --help to show this help page.                     #"
+    echo "#                                                                               #"
+    echo "#################################################################################"
+    echo ""
+    echo "Flags:"
+    echo " -h, --help    # Display this help message."
+    echo " -e, --enable  # Enable Keychron launcher."
+    echo " -d, --disable # Disable Keychron launcher."
+    echo ""
