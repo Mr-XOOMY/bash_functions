@@ -13,6 +13,7 @@
 ###   global variables   ###
 
 declare BF__HELP_PAGE__TEXT
+BF__HELP_PAGE__TEXT=""
 
 
 
@@ -21,10 +22,12 @@ declare BF__HELP_PAGE__TEXT
 # Set help page text.
 bf__help_page_set() {
 
-    # Check if stdin is redirected (non-terminal) and save it to HELP_PAGE__TEXT.
+    # Check if stdin is redirected (non-terminal) and save it to BF__HELP_PAGE__TEXT.
+    # Strip 1 newline from BF__HELP_PAGE__TEXT.
     # Print an error if input is interactive (keyboard) or empty.
     if [ ! -t 0 ]; then
-        BF__HELP_PAGE__TEXT="$(</dev/stdin)"
+        IFS= read -r -d '' BF__HELP_PAGE__TEXT || true
+        BF__HELP_PAGE__TEXT="${BF__HELP_PAGE__TEXT%$'\n'}"
     else
         echo "ERROR: bf__help_page: No input. Usage: bf__help_page_set << EOF ... EOF, or bf__help_page_set < file" >&2; return 1
     fi

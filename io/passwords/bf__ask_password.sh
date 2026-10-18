@@ -17,6 +17,7 @@ bf__ask_password() {
 
     # local variables
     local -n bf__ask_password__nameref__password="$1"
+    bf__ask_password__nameref__password=""
     local bf__ask_password__password_confirmation
     bf__ask_password__password_confirmation=""
     local bf__ask_password__question1
