@@ -13,7 +13,7 @@ For updates you would use the commands:
 git fetch bash_functions
 ```
 ```
-git subtree pull --prefix .bash_functions bash_functions main --squash
+git subtree pull --prefix bash_functions bash_functions main --squash
 ```
 If you only need some specific functions, you can always just create a folder inside your project and copy over the functions needed. This makes your project not reliant on the external repo, but you need to update these functions manually if needed.
 
